@@ -24,7 +24,7 @@ const publicPath = '/'
 export default {
 	devtool: 'inline-source-map',
 	entry: {
-		index: hotReload.concat(path.join(__dirname, 'src', 'js', 'index.js'))
+		concept1: hotReload.concat(path.join(__dirname, 'src', 'concept1', 'js', 'index.js'))
 	},
 	devServer: {
 		outputPath,
@@ -68,9 +68,9 @@ export default {
 			}
 		}),
 		new HtmlWebpackPlugin({
-			template: path.join(__dirname, 'src', 'index.html'),
-			filename: 'index.html',
-			chunks: ['index']
+			template: path.join(__dirname, 'src', 'concept1', 'index.html'),
+			filename: 'concept1.html',
+			chunks: ['concept1']
 		}),
 		new WriteFilePlugin()
 	]

@@ -18,7 +18,7 @@ export default {
 	target: 'node',
 	externals: [nodeExternals()],
 	entry: {
-		index: path.join(__dirname, 'src', 'js', 'hello.js')
+		concept1: path.join(__dirname, 'src', 'concept1', 'js', 'hello.js')
 	},
 	output: {
 		path: outputPath,

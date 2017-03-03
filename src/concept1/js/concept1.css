@@ -1,0 +1,55 @@
+html, body {
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	font-size: 1em;
+}
+
+body > * {
+	height: 100%;
+}
+
+.container {
+	position: relative;
+	display: flex;
+	background-image: url('http://www.zastavki.com/pictures/originals/2015/Backgrounds_Line_of_computer_code__gray_background_099063_.jpg')
+}
+
+.container:
+
+#app-container {
+	display: flex;
+	height: 100%;
+}
+
+.leftBar {
+	position: relative;
+	min-width: 200px;
+	max-width: 500px;
+	flex: 1;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	opacity: 0.85;
+	box-shadow: 3px 10px 10px black;
+}
+
+/* the container for the right side content*/
+.contentView {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex: 2;
+	height: 100%;
+}
+
+/* Left Bar content */ 
+
+.leftBarContent {
+	transform: translateY(150px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+} 
