@@ -3,10 +3,12 @@ html, body {
 	height: 100%;
 	width: 100%;
 	font-size: 1em;
+	font-family: helvetica;
 }
 
 body > * {
 	height: 100%;
+	overflow: hidden;
 }
 
 .container {
@@ -15,23 +17,36 @@ body > * {
 	background-image: url('http://www.zastavki.com/pictures/originals/2015/Backgrounds_Line_of_computer_code__gray_background_099063_.jpg')
 }
 
-.container:
 
 #app-container {
 	display: flex;
+	display: -webkit-flex;
 	height: 100%;
+}
+
+
+/* general css */
+.hoverableImage {
+	transition: opacity 0.2s;
+	opacity: 0.6;
+}
+
+.hoverableImage:hover {
+	opacity: 1;
 }
 
 .leftBar {
 	position: relative;
 	min-width: 200px;
-	max-width: 500px;
+	max-width: 300px;
 	flex: 1;
-	height: 100%;
+	-webkit-flex: 1;
+	/*webkit needed*/
 	display: flex;
+	display: -webkit-flex;
+	transition: all 0.3s;
 	flex-direction: column;
-	background-color: white;
-	opacity: 0.85;
+	background-color: rgba(250,250,250 ,0.85);
 	box-shadow: 3px 10px 10px black;
 }
 
@@ -40,16 +55,67 @@ body > * {
 	position: relative;
 	display: flex;
 	flex-direction: column;
+	display: -webkit-flex;
 	flex: 2;
-	height: 100%;
+	-webkit-flex: 2;
+	background-color: rgba(33,33,33 ,0.7);
+	z-index: 1;
 }
 
 /* Left Bar content */ 
+.headerContainer {
+	position: relative;
+	flex: 0.3;
+	background-color: rgba(97,97,97 ,0.7);
+}
+
+.headerIcon {
+	position: absolute;
+	height: 150px;
+	width: 150px;
+	top: 100%;
+	left: 50%;
+	transform: translateX(50%) translateY(50%);
+	background-position: center;
+	background-size: cover;
+	border-radius: 100%;
+}
 
 .leftBarContent {
-	transform: translateY(150px);
+	flex: 1;
+	padding-top: 75px;
 	display: flex;
+	display: -webkit-flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
 } 
+
+.iconRow {
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	width: 80%;
+	min-width: 150px;
+	max-width: 275px;
+	justify-content: space-around;
+}
+
+.socialMediaBar {
+	align-self: flex-end;
+	height: 48px;
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 100%;
+	background-color: lightgrey;
+}
+
+.socialMediaBar img {
+	height: 32px;
+	width: 32px;
+	margin-right: 5px;
+}
+
+
+

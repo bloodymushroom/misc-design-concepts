@@ -12,13 +12,13 @@ export default class HeaderIcon extends Component {
     var styles = {
       container: {
         position: 'relative',
-        flex: 0.3,
-        backgroundColor: 'grey'
+        flex: 0.4,
+        backgroundColor: 'grey',
       },
       img: {
         position: 'absolute',
-        height: '200px',
-        width: '200px',
+        height: '128px',
+        width: '128px',
         top: '100%',
         // make sure picture is centered 
         left: '50%',
@@ -27,16 +27,17 @@ export default class HeaderIcon extends Component {
         backgroundImage: `url(${fakeProps.image})`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
-        border: '4px green solid',
+        backgroundRepeat: 'no-repeat',
         // border radius
-        borderRadius: '100%'
+        borderRadius: '100%',
+        // border: '8px solid rgba(158,158,158 ,0.7)',
       }
     }
     
     return (
-      <div style={styles.container}>
-        <div style={styles.img}>
-        </div>
+      <div className={classNames.headerContainer}>
+        <a target="_blank" href={fakeProps.image}><div style={styles.img}>
+        </div></a>
       </div>
     )
   }
