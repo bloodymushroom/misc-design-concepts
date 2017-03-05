@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 // css
-import classNames from './concept1.css'
+import classNames from './styles/concept1.css'
 
 var fakeProps = {
   image: 'http://i.imgur.com/MJdvfak.jpg'

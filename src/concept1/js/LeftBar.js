@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import classNames from './concept1.css'
+import classNames from './styles/concept1.css'
 
 // components
 import HeaderIcon from './HeaderIcon'
@@ -50,9 +50,8 @@ export default class LeftBar extends Component {
       }
     }
 
-    console.log(classNames.leftBar)
     return (
-      <div style={this.state.hidden ? { flex: 0.2, minWidth: '0px', left: '-100px' } : { flex: 1 }} className={ classNames.leftBar }>
+      <div style={this.state.hidden ? { left: '-15%' } : { left: '0px' }} className={ classNames.leftBar }>
         <HeaderIcon />
         <LeftBarContent />
         <SocialMediaBar />

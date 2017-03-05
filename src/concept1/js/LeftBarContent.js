@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 // css
-import classNames from './concept1.css'
+import classNames from './styles/concept1.css'
 import CustomIcon from './CustomIcon'
 
 var iconData = [
@@ -17,7 +17,7 @@ var iconData = [
     url: 'http://a.dryicons.com/images/icon_sets/polygon_icons/png/256x256/computer.png'
   },
   {
-    label: 'about me',
+    label: 'about',
     url: 'https://cdn2.iconfinder.com/data/icons/transparent-round-icons/512/user.png'
   }
 ]
@@ -30,7 +30,7 @@ export default class LeftBarContent extends Component {
   render() {
     return(
       <div className={classNames.leftBarContent}>
-        <h1>Portfolio<br/>EmmelineLan</h1>
+        <div className={classNames.headerCategory}>navigation</div>
         <div className={classNames.iconRow}>
           {iconData.map((icon) => <CustomIcon label={icon.label} url={icon.url} />)}
         </div>

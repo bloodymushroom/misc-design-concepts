@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import classNames from './concept1.css'
+import classNames from './styles/concept1.css'
 
 var iconData = {
   home: {
@@ -34,7 +34,7 @@ export default class CustomIcon extends Component {
         alignItems: 'center',
         width: '50%',
         maxWidth: '200px',
-        margin: '25px 0 25px 0'
+        margin: '0 0 15px 0'
       },
       image: {
         color: 'black',
@@ -45,7 +45,7 @@ export default class CustomIcon extends Component {
     return (
       <div className={classNames.hoverableImage} style={styles.container}>
         <img style={styles.image} src={this.props.url} />
-        <span style={{marginTop: '20px'}}>{this.props.label}</span>
+        <span style={{marginTop: '10px'}}>{this.props.label}</span>
       </div>
     )
   }
