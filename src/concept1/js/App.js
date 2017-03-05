@@ -8,9 +8,9 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 // components
 import LeftBar from './LeftBar'
 import ContentView from './ContentView'
+import ProjectView from './ProjectView'
 
-import classNames from './concept1.css'
-
+import classNames from './styles/concept1.css'
 
 type Props = {}
 type State = {
@@ -44,7 +44,8 @@ export default class Hello extends Component {
 			<MuiThemeProvider>
 				<div style={{height: '100%'}} className={classNames.container} >
 					<LeftBar />
-					<ContentView />
+					{false && <ContentView />}
+					{true && <ProjectView />}
 				</div>
 			</MuiThemeProvider>
 		)
