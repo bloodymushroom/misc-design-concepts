@@ -1,0 +1,29 @@
+.slidingUnder {
+	position: relative;
+	height: 55vh;
+	width: 83vh;
+	background-size: auto 100%;
+	cursor: pointer;
+}
+
+.slidingOver {
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 50%;
+	background-size: auto 100%;
+}
+
+.mover {
+  background-color: yellow;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 120%;
+  transform: translateY(-8.3%);
+  width: 2px;
+  z-index: 3;
+  opacity: 0.5;
+}
