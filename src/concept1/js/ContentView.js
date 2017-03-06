@@ -4,8 +4,14 @@ import classNames from './styles/concept1.css'
 import HeaderIcon from './HeaderIcon'
 import SlidingImage from './SlidingImage'
 
-export default class ContentView extends Component {
+//// mobx
+import { toJS } from 'mobx'
+import store from './mobx/Store'
+import {observer} from 'mobx-react'
+
+@observer class ContentView extends Component {
   render() {
+    console.log('contentview', store.currentView)
     return (
       <div className={classNames.contentView}>
         <div className={classNames.slidingContainer}>
@@ -16,3 +22,5 @@ export default class ContentView extends Component {
     )
   }
 }
+
+export default ContentView

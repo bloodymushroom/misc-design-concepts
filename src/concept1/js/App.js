@@ -10,14 +10,28 @@ import LeftBar from './LeftBar'
 import ContentView from './ContentView'
 import ProjectView from './ProjectView'
 
+//css
 import classNames from './styles/concept1.css'
+
+// mobx
+import store from './mobx/Store'
+import {observer} from 'mobx-react'
+
+// class PageState {
+// 	views = ['home', 'skills', 'projects', 'about'];
+
+// 	@observable currentView = 'home';
+// }
+
+// const pageState = new PageState();
 
 type Props = {}
 type State = {
 	count: number
 }
 
-export default class Hello extends Component {
+@observer
+class App extends Component {
 	props: Props
 	state: State
 
@@ -44,10 +58,12 @@ export default class Hello extends Component {
 			<MuiThemeProvider>
 				<div style={{height: '100%'}} className={classNames.container} >
 					<LeftBar />
-					{false && <ContentView />}
-					{true && <ProjectView />}
+					{store.currentView === 'home' && <ContentView />}
+					{store.currentView === 'projects' && <ProjectView />}
 				</div>
 			</MuiThemeProvider>
 		)
 	}
 }
+
+export default App;

@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
 import classNames from './styles/concept1.css'
 
+// mobx
+import { toJS } from 'mobx'
+import store from './mobx/Store'
+import {observer} from 'mobx-react'
+
 var iconData = {
   home: {
     value: 'home',
@@ -15,14 +20,23 @@ var iconData = {
     url: 'http://www.icon2s.com/img256/256x256-ios7-folder-icon.png'
   },
   about: {
-    value: 'about me',
+    value: 'about',
     url: 'https://cdn2.iconfinder.com/data/icons/transparent-round-icons/512/user.png'
   }
 }
 
-export default class CustomIcon extends Component {
+
+
+@observer class CustomIcon extends Component {
   constructor(props) {
     super(props)
+
+    this.changeView = this.changeView.bind(this);
+  }
+
+  changeView() {
+    console.log(toJS(store.currentView));
+    store.changeView(this.props.label)
   }
 
   render() {
@@ -43,10 +57,12 @@ export default class CustomIcon extends Component {
       }
     }
     return (
-      <div className={classNames.hoverableImage} style={styles.container}>
+      <div onClick={this.changeView} className={classNames.hoverableImage} style={styles.container}>
         <img style={styles.image} src={this.props.url} />
         <span style={{marginTop: '10px'}}>{this.props.label}</span>
       </div>
     )
   }
 }
+
+export default CustomIcon;

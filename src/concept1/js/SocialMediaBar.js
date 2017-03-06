@@ -32,7 +32,7 @@ export default class SocialMediaBar extends Component {
         { 
           icons.map((item) => {
             return (
-              <div className={[classNames.socialMediaContent, classNames.hoverableImage].join(' ')}>
+              <div key={item.title} className={[classNames.socialMediaContent, classNames.hoverableImage].join(' ')}>
                 <a target='_blank' href={item.url}>
                   <img src={item.icon}/>
                 </a>

@@ -83,6 +83,7 @@ export default class SlidingImage extends Component {
 				onMouseLeave={this.mouseOff}
 				onClick={(e) => this.changeImage(e, 'click')}
 			>
+				<img className={classNames.bgImage} src='http://i.imgur.com/rnmKu8v.png'/>
 				<div 
 					style={styles.slidingOver} 
 					className={classNames.slidingOver}
