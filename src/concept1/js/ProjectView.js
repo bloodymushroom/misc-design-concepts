@@ -3,20 +3,30 @@ import classNames from './styles/projectView.css'
 
 // components
 import ProjectDiv from './ProjectDiv'
+import ProjectActive from './ProjectActive'
 
+// mobx
+import store from './mobx/Store'
+import {observer} from 'mobx-react'
 
-export default class ProjectView extends Component {
+@observer
+class ProjectView extends Component {
   render() {
     return (
       <div className={classNames.projectContainer}>
+        <ProjectActive project={store.projects[store.currentProject]}/>
+        <div className={classNames.inactiveDiv}>
         {
-          [1, 2, 3, 4, 5, 6].map((i) => {
+          store.projects.map((project, index) => {
             return (
-            <ProjectDiv><span>Div {i}</span><span>Expanded {i}</span></ProjectDiv>
+            <ProjectDiv key={index} id={index} project={project} />
           )
           })
         }
+        </div>
       </div>
     )
   }
 }
+
+export default ProjectView

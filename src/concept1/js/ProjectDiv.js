@@ -1,7 +1,13 @@
 import React, { Component } from 'react'
 import classNames from './styles/projectView.css'
 
-export default class ProjectDiv extends Component {
+// mobx
+import store from './mobx/Store'
+import {observer} from 'mobx-react'
+
+
+@observer
+class ProjectDiv extends Component {
   constructor(props) {
     super(props);
 
@@ -13,28 +19,29 @@ export default class ProjectDiv extends Component {
   }
 
   toggleDiv() {
-    console.log('togglied')
-    this.setState({
-      expanded: this.state.expanded? false: true
-    })
+    console.log(this.props.id)
+    store.currentProject = this.props.id;
   }
 
   render() {
-    var expandedStyle = {
-      order: 1,
-      width: '80%',
-      height: '40%'
+    console.log(this.props.id, store.currentProject)
+    var isActiveStyle = {
+      opacity: 1
     }
 
     return (
       <div 
-        style={this.state.expanded? expandedStyle : {}} 
-        className={classNames.projectDiv}
+        style={this.props.id === store.currentProject? isActiveStyle : {}} 
+        className={[classNames.projectDiv, classNames.hoverableImage].join(' ')}
         onClick={this.toggleDiv}
       >
-        {!this.state.expanded && this.props.children[0]}
-        {this.state.expanded && this.props.children[1]}
+        <span>{this.props.project.name}</span>
+        <img className={classNames.inactiveImg} src={this.props.project.icon}/>
+        <span style={{fontSize: '0.8em'}}>{this.props.project.description}</span>
+        
       </div>
     )
   }
 }
+
+export default ProjectDiv
