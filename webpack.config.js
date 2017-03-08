@@ -69,7 +69,7 @@ export default {
 		}),
 		new HtmlWebpackPlugin({
 			template: path.join(__dirname, 'src', 'concept1', 'index.html'),
-			filename: 'concept1.html',
+			filename: 'index.html',
 			chunks: ['concept1']
 		}),
 		new WriteFilePlugin()
