@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import classNames from './styles/projectView.css'
-
 //mobx
 import store from './mobx/Store'
 import {observer} from 'mobx-react'
@@ -28,11 +27,28 @@ class ProjectActive extends Component {
     this.setState({
       imageCount: this.state.imageCount + 1
     })
+
+    console.log('animate function', this.refs.gallery.animate)
+    this.refs.gallery.animate([
+      {transform: 'translateX(100%)', opacity: 0},
+      {transform: 'translateX(0%)', opacity: 1}
+    ], {
+      duration: 200,
+      iterations: 1
+    })
   }
 
   decrementCount() {
     this.setState({
       imageCount: this.state.imageCount - 1
+    })
+
+    this.refs.gallery.animate([
+      {transform: 'translateX(-100%)', opacity: 0},
+      {transform: 'translateX(0%)', opacity: 1}
+    ], {
+      duration: 200,
+      iterations: 1
     })
   }
 
@@ -56,7 +72,9 @@ class ProjectActive extends Component {
         </div>
         <div className={classNames.activeRight}>
           <img  onClick={this.decrementCount} className={classNames.hoverableImage} style={{height: '50px', width: 'auto'}} src={arrows}></img>
-          <div style={backgroundPicture} className={classNames.gallery}>
+          <div className={classNames.galleryContainer}>
+            <div ref='gallery' style={backgroundPicture} className={classNames.galleryImage}>
+            </div>
           </div>
           <img onClick={this.incrementCount} className={classNames.hoverableImage} style={{height: '50px', width: 'auto', transform: 'rotate(180deg)'}} src={arrows}></img>
         </div>
@@ -64,5 +82,11 @@ class ProjectActive extends Component {
     )
   }
 }
+            // transitionName={{
+            //   appear: classNames.exampleAppear,
+            //   appearActive: classNames.exampleAppearActive,
+            //   enter: classNames.exampleAppear,
+            //   enterActive: classNames.exampleAppearActive
+            // }}
 
 export default ProjectActive

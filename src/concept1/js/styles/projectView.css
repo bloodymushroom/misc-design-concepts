@@ -50,15 +50,25 @@
 	color: white;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
 }
 
-.gallery {
+.galleryContainer {
 	flex: 1;
 	-webkit-flex: 1;
 	display: flex;
 	display: -webkit-flex;
 	height: 80%;
 	min-height: 300px;
+	overflow: hidden;
+/*	animation-name: gallerySlide;
+	animation-duration: 0.2s;
+	animation-iteration-count: unset;*/
+}
+
+.galleryImage {
+	height: 100%;
+	width:100%;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
@@ -99,6 +109,7 @@
 }*/
 
 .inactiveDiv {
+	background-color: rgba(0, 0, 0.75);
 	flex: 1;
 	-webkit-flex: 1;
 	display: flex;
