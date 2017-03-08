@@ -1,0 +1,177 @@
+:root {
+  --rotation: '0deg';
+};
+
+
+
+/* Tooltip styling */
+.tooltip {
+  z-index: 1;
+  position: absolute;
+  right: 5px;
+  height: 70px;
+  width: 140px;
+  border-radius: 15px 15px 15px 0px;
+  box-shadow: 5px 5px 5px grey;
+  background-color: var(--secondary-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tooltipContent {
+  word-wrap: break-word;
+  color: black;
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* skills chart baels*/
+.skillLabelContainer {
+  color: rgba(250, 250, 250, 0.9);
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.skillLabel {
+  opacity: 0.7;
+  transition: all 0.3s;
+  flex: 1;
+  padding-left: 30%;
+}
+
+.skillLabel:hover {
+  opacity: 1;
+}
+
+.skillChartContainer {
+  background-color: rgba(250, 250, 250, 0.8);
+  width: 60%;
+  min-width: 400px;
+  min-height: 300px;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.chartSubContainer {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+}
+
+.skillsView {
+  position: relative;
+  color: rgba(250, 250, 250, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  height: 100%;
+  flex: 2;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Resume Bar */
+.resumeContainer {
+  color: rgba(250,250,250 ,0.85);
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-bottom: 1px solid rgba(250,250,250 ,0.85);
+}
+
+.resumeContainer img {
+  height: 24px;
+  width: auto;
+  margin-right: 5px;
+}
+
+.resumeContainer a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.2s;
+  opacity: 0.7;
+  padding: 0 15px 0 15px;
+}
+
+.resumeContainer a:hover {
+  opacity: 0.85;
+}
+
+.resumeModal {
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Experience */
+.experienceContainer {
+  color: white;
+  height: 30vh;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.experienceSquare {
+  opacity: 0.7;
+  border: 1px solid white;
+  /*border-radius: 15px;*/
+  height: 25vh;
+  width: 25vh;
+  min-height: 150px;
+  min-width: 150px;
+  overflow: hidden;
+}
+
+.experienceSquare:hover {
+  opacity: 1
+}
+
+.experienceSquare:hover .expSwiper {
+  transform: translateX(-50%);
+}
+
+.experienceHeader {
+  background-color: white;
+  height: 25%;
+  background-position: center;
+  background-size: auto 80%;
+  background-repeat: no-repeat;
+}
+
+.expSwiper {
+  width: 200%;
+  height: 80%;
+  border: 1px solid white;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+/*.expSwiper:hover {
+  transform: translateX(-50%);
+}*/
+
+.expSwiper div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 
+}
