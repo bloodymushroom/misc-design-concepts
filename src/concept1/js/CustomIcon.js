@@ -44,15 +44,19 @@ var iconData = {
       container: {
         display:'flex',
         flexDirection: 'column',
-        justifyContent: 'space-around',
+        justifyContent: 'center',
         alignItems: 'center',
         width: '50%',
-        maxWidth: '200px',
-        margin: '0 0 15px 0'
+        maxWidth: '100px',
+        margin: '0 0 10px 0',
+        opacity: store.currentView === this.props.label? 1 : '',
+        fontWeight: store.currentView === this.props.label? 'bold': 'normal',
+        transition: 'all 0.2s'
       },
       image: {
+        filter: 'grayscale(100%)',
         color: 'black',
-        width: '70%',
+        width: '60%',
         maxWidth: '64px',
       }
     }

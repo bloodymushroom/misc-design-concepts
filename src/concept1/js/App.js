@@ -9,6 +9,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import LeftBar from './LeftBar'
 import ContentView from './ContentView'
 import ProjectView from './ProjectView'
+import SkillsView from './SkillsView'
+import AboutView from './AboutView'
 
 //css
 import classNames from './styles/concept1.css'
@@ -58,8 +60,13 @@ class App extends Component {
 			<MuiThemeProvider>
 				<div style={{height: '100%'}} className={classNames.container} >
 					<LeftBar />
-					{store.currentView === 'home' && <ContentView />}
-					{store.currentView === 'projects' && <ProjectView />}
+						{store.currentView === 'home' && <ContentView />}
+						{store.currentView === 'projects' && <ProjectView />}
+						{store.currentView === 'skills' && <SkillsView />}
+						{store.currentView === 'about' && <AboutView />}
+					<div style={{flex: 2, display: 'none', flexDirection: 'column'}}>
+						<span style={{color: 'white'}}>{store.currentView}</span>
+					</div>
 				</div>
 			</MuiThemeProvider>
 		)
