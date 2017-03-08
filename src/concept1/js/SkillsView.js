@@ -5,9 +5,7 @@ import classNames from './portfolio0/skillsView.css'
 
 
 // components
-import SkillSpinner from './portfolio0/SkillSpinner'
 import SkillChart from './portfolio0/SkillChart'
-import Tooltip from './portfolio0/Tooltip'
 import SkillsMenu from './portfolio0/SkillsMenu'
 import ResumeBar from './portfolio0/ResumeBar'
 import SkillsExperience from './portfolio0/SkillsExperience'
