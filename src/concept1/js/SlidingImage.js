@@ -29,6 +29,9 @@ export default class SlidingImage extends Component {
 	}
 
 	computePosition() {
+		if (!this.slidingOver) {
+			return;
+		}
 		var relativeElement = this.slidingOver.getBoundingClientRect();
 		this.setState({
 			left: relativeElement.left
@@ -44,7 +47,6 @@ export default class SlidingImage extends Component {
 		var mousePosition = e.pageX;
 		var dX = mousePosition - this.state.left;
 
-		console.dir(dX)
 		this.setState({
 			overWidth: `${dX}px`
 		})
