@@ -37,17 +37,24 @@ class SkillsView extends Component {
   }
 
   render() {
+    var headerStyle = {
+      alignSelf: 'flex-start',
+      marginLeft: '10%',
+      width: '20%',
+      textTransform: 'lowercase',
+      borderBottom: '1px solid rgba(250, 250, 250, 0.8)'
+    }
   console.log(classNames.skillsView)
     return (
       <div className={classNames.skillsView}>
         <ResumeBar />
         {store.showPreview && this.previewModal()}
-        <span>Skills:</span>
+        <div style={headerStyle} >Skills</div>
         <div className={classNames.chartSubContainer}>
           <SkillsMenu />
           <SkillChart activeChart={store.currentSkill}/>
         </div>
-        <span>Experience & Education:</span>
+        <div style={headerStyle}>Experience & Education</div>
         <SkillsExperience />
       </div>
     )
