@@ -55,7 +55,7 @@ export default class LeftBar extends Component {
         <HeaderIcon />
         <LeftBarContent />
         <SocialMediaBar />
-        <div style={styles.toggleButton} onClick={this.toggleView}>
+        { false && <div style={styles.toggleButton} onClick={this.toggleView}>
           <RaisedButton 
             backgroundColor='#FFC107'
             label={this.state.hidden? '>': '<'}
@@ -66,6 +66,7 @@ export default class LeftBar extends Component {
             }}
           />
         </div>
+        }
       </div>
     )
   }
