@@ -1,0 +1,121 @@
+.aboutContainer {
+	flex: 1;
+	color: rgba(250, 250, 250, 0.85);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.aboutHeader {
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	padding-top: 20px;
+}
+
+.aboutHeader span {
+	width: 80%;
+	text-align: center;
+	font-size: 0.8em;
+	margin: 10px 0 10px 0;
+}
+
+.feedbackContainer {
+	flex: 1;
+	color: rgba(250, 250, 250, 0.85);
+	width: 30%;
+	text-align: center;
+}
+
+.feedbackForm {
+	width: 100%;
+	height: 87%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.feedbackText {
+	height: 200px;
+}
+
+.feedbackText, .formSubmit {
+	outline: none;
+	opacity: 0.8;
+	font-size: 0.9em;
+	border: none;
+}
+
+.feedbackForm > input {
+	width: 100%;
+	height: 24px;
+}
+
+.feedbackForm > textarea {
+	width: 100%;
+	height: 150px;
+	padding: 0;
+	resize: none;
+}
+
+.feedbackText:focus, .formSubmit:hover {
+	opacity: 1;
+	transition: opacity 0.3s;
+}
+
+.aboutGallery {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin: 20px 0 20px 0;
+}
+
+.aboutGallery > * {
+	flex: 1;
+}
+
+.aboutImage {
+	width: 100%;
+	height: auto;
+	transition: all 0.3s;
+}
+
+.aboutImage:hover {
+	cursor: pointer;
+	-webkit-filter: brightness(130%);
+	filter: brightness(130%);
+}
+
+/*.previewContainer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;	
+	background-color: rgba(0, 0, 0, 0.5);
+}*/
+
+.galleryPreview {
+	z-index: 2;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.5);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 80%;
+}
+
+.galleryX {
+	position: absolute;
+	top: 5%;
+	left: 50%;
+	cursor: pointer;
+}
+

@@ -44,6 +44,26 @@ class Store {
       ] 
     },
     {
+      name: 'Callback',
+      description: 'your personal recruiter',
+      images: ['http://i.imgur.com/vtx96nd.png',
+      'https://s3.amazonaws.com/poly-screenshots.angel.co/Project/ec/465631/59e0231823d0ca88e5f01c2524f3ab99-original.png',
+      'https://s3.amazonaws.com/poly-screenshots.angel.co/Project/ec/465631/c03af100642502b913f00d55a27b8311-original.gif',
+      'https://s3.amazonaws.com/poly-screenshots.angel.co/Project/ec/465631/ee5e27fdac226ceb0ec2d60258956fd3-original.gif'
+      ],
+      icon: 'https://d30y9cdsu7xlg0.cloudfront.net/png/221163-200.png',
+      stack: [
+        'React/Native', 'Node/Express', 'MySQL'
+      ],
+      responsibilities: [
+        '- Built mobile platform using React-Native and integrated with Express Server and MySQL', 
+        '- Migrated React-Native mobile app to Exponent for cross-platform mobile OS support',
+        '- Implemented features for Web Client using React, React-Router and MobX',
+        // '- Integrated Google OAuth for mobile client with server side authentication for seamless login',
+        // '- Polished front end design using CSS3 and Material UI for consistency across platforms'
+      ] 
+    },
+    {
       name: 'HRGotchi',
       description: 'a digital class pet',
       images: [
@@ -70,26 +90,6 @@ class Store {
       ],
       responsibilities: [
         '- Coming soon!'
-      ] 
-    },
-    {
-      name: 'Callback',
-      description: 'your personal recruiter',
-      images: ['http://i.imgur.com/vtx96nd.png',
-      'https://s3.amazonaws.com/poly-screenshots.angel.co/Project/ec/465631/59e0231823d0ca88e5f01c2524f3ab99-original.png',
-      'https://s3.amazonaws.com/poly-screenshots.angel.co/Project/ec/465631/c03af100642502b913f00d55a27b8311-original.gif',
-      'https://s3.amazonaws.com/poly-screenshots.angel.co/Project/ec/465631/ee5e27fdac226ceb0ec2d60258956fd3-original.gif'
-      ],
-      icon: 'https://d30y9cdsu7xlg0.cloudfront.net/png/221163-200.png',
-      stack: [
-        'React/Native', 'Node/Express', 'MySQL'
-      ],
-      responsibilities: [
-        '- Built mobile platform using React-Native and integrated with Express Server and MySQL', 
-        '- Migrated React-Native mobile app to Exponent for cross-platform mobile OS support',
-        '- Implemented features for Web Client using React, React-Router and MobX',
-        // '- Integrated Google OAuth for mobile client with server side authentication for seamless login',
-        // '- Polished front end design using CSS3 and Material UI for consistency across platforms'
       ] 
     }
   ]

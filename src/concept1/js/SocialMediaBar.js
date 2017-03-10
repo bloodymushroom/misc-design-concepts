@@ -34,9 +34,11 @@ export default class SocialMediaBar extends Component {
             return (
               <div key={item.title} className={[classNames.socialMediaContent, classNames.hoverableImage].join(' ')}>
                 <a target='_blank' href={item.url}>
+                <div style={{color: 'black', display:'flex', flexDirection: 'row', alignItems:'center', textDecoration: 'none'}}>
                   <img src={item.icon}/>
+                  <span >{item.caption}</span>
+                </div>
                 </a>
-                <span>{item.caption}</span>
               </div>
             )
           })

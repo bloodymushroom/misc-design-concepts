@@ -17,7 +17,7 @@ class SkillChart extends Component {
     this.renderChart = this.renderChart.bind(this);
 
     this.state = {
-        labelSize: 15,
+        labelSize: 12,
         titleSize: 10
     }
   }
@@ -43,7 +43,7 @@ class SkillChart extends Component {
             labels: ["Javascript", "CSS/CSS3", "HTML5", "Ruby", "English"],
             datasets: [{
                 label: 'Proficiency from 1 - Novice to 5 - Expert',
-                data: [4, 4, 3, 1, 5],
+                data: [5, 4, 4, 3, 5],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
@@ -93,10 +93,10 @@ class SkillChart extends Component {
     var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ["React/Native", "Angular", "Backbone", "Mobx", "Flux"],
+            labels: ["React/Native", "Angular", "Backbone", "Mobx", "Redux"],
             datasets: [{
                 label: 'Proficiency from 1 - Novice to 5 - Expert',
-                data: [4, 2, 2, 3, 3],
+                data: [5, 4, 3, 5, 3],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
@@ -149,7 +149,7 @@ class SkillChart extends Component {
             labels: ["Webpack", "Wireframing", "TDD", "Git Workflow", "Agile/Scrum"],
             datasets: [{
                 label: 'Proficiency from 1 - Novice to 5 - Expert',
-                data: [4, 3, 2, 3, 3],
+                data: [4, 3, 3, 4, 4],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
@@ -202,7 +202,7 @@ class SkillChart extends Component {
             labels: ["Node/Express", "MongoDB", "MySQL", "Redis", "RESTful APIs"],
             datasets: [{
                 label: 'Proficiency from 1 - Novice to 5 - Expert',
-                data: [3, 3, 4, 1, 3],
+                data: [4, 4, 5, 3, 4],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',

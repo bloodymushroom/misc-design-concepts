@@ -20,6 +20,10 @@ body > * {
 	overflow: hidden;
 }
 
+a {
+	text-decoration: none;
+}
+
 .container {
 	width: 100%;
 	position: relative;

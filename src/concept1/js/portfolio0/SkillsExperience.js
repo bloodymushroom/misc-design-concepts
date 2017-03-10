@@ -22,8 +22,8 @@ class SkillsExperience extends Component {
               / >
               <div className={classNames.expSwiper}>
                 <div>
-                  <span>{exp.role}</span>
-                  <span>{exp.from}</span>
+                  <span style={{textAlign: 'center'}}>{exp.role}</span>
+                  <span style={{textAlign: 'center'}}>{exp.from}</span>
                 </div>
                 <div>
                   <ul>
