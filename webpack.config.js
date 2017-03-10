@@ -23,6 +23,11 @@ const publicPath = '/'
 
 export default {
 	devtool: 'inline-source-map',
+	node: {
+  fs: 'empty',
+  net: 'empty',
+  tls: 'empty'
+	},
 	entry: {
 		concept1: hotReload.concat(path.join(__dirname, 'src', 'concept1', 'js', 'index.js'))
 	},
